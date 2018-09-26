@@ -64,8 +64,8 @@ class h5IO():
                     first, last = self._get_first_last(ds_shape[2])
                     ds[:,:,first:last] = data
                 # initialize dataset's attributes
-                # for k in kwargs.keys():
-                #     ds.attrs[k] = kwargs[k]
+                for k in kwargs.keys():
+                    ds.attrs[k] = kwargs[k]
                 # return dataset
                 return ds
             # if a dataset with the same name is present: raise exception
