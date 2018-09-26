@@ -38,7 +38,6 @@ finally:
     if(rank==0):
         os.system("h5dump -A "+h5io.h5filepath)
 
-comm.Barrier()
 ds0_read_from_h5 = h5io.get_dataset('/group0/ds0', 'x', nx)
 assert data.all() == ds0_read_from_h5.all(), "Wrong read of ds0_read_from_h5."
 
