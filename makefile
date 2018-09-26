@@ -1,5 +1,5 @@
 MPIRUN=mpirun
-PYTHON=python
+PYTHON=python3.5
 NP=5
 
 run:
